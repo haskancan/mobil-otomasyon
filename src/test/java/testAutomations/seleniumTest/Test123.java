@@ -66,6 +66,10 @@ public class Test123 {
 //        driver.findElement(By.xpath("//*[@id='btnSelectProject' and (./preceding-sibling::* | ./following-sibling::*)[./*[@text='361 - Test Proje']]]")).click();
 //        driver.findElement(By.xpath("(//*[@id='lvProjectList']/*/*[@id='btnSelectProject'])[2]")).click();
 
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@id='lvProjectList']/*/*[@id='btnSelectProject'])[2]")));
+        driver.findElement(By.xpath("(//*[@id='lvProjectList']/*/*[@id='btnSelectProject'])[2]")).click();
+
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
